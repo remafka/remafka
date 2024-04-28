@@ -20,5 +20,5 @@ mkdir -p "$2"
 # копируем файлы из входной дир. в выходную дир.
 find "$1" -type f -exec cp {} "$2" \;
 
-# тест о завершении
+# текст о завершении
 echo "Files copied successfully from $1 to $2"

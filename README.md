@@ -1,5 +1,5 @@
 #!/bin/bash
-
+### Заголовок 3
 ## есть ли 2 параметра?
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 <input_directory> <output_directory>"

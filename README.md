@@ -1,6 +1,6 @@
 ## Запускаем скрипт через cmd
 $ ./task1.sh
 
-<input_dir>
+<input_directory>
   
-<output_dir>
+<output_directory>

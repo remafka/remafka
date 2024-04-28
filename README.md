@@ -4,6 +4,22 @@
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 <input_directory> <output_directory>"
     exit 1
+
+
+### Есть ли 2 параметра?
+
+
+#include <fstream>
+#include <remafka/t1>
+using t1 = remafka::t1;
+
+// ...
+
+std::ifstream f("example.t1");
+t1 data = t1::parse(f);
+```
+
+
 # вывести, если меньше параметров, чем планировалось
 fi
 

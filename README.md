@@ -1,16 +1,24 @@
-### Hi there 👋
+#!/bin/bash
 
-<!--
-**remafka/remafka** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# есть ли 2 параметра?
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <input_directory> <output_directory>"
+    exit 1
+# вывести, если меньше параметров, чем планировалось
+fi
 
-Here are some ideas to get you started:
+# есть ли входная директория?
+if [ ! -d "$1" ]; then
+    echo "Input directory does not exist"
+    exit 1
+# если входной директории нет
+fi
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+# создадим выходную директорию, если её нет
+mkdir -p "$2"
+
+# копируем файлы из входной дир. в выходную дир.
+find "$1" -type f -exec cp {} "$2" \;
+
+# тест о завершении
+echo "Files copied successfully from $1 to $2"

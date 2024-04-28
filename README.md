@@ -1,5 +1,5 @@
 ## Запускаем скрипт через cmd
-$ ./task1.sh
+$ ./t1.sh
 
 <input_directory>
   
